@@ -9,33 +9,29 @@ import { signOut, useSession } from "next-auth/react";
 const links = [
   {
     id: 1,
-    title: "Home",
+    title: "Início",
     url: "/",
   },
   {
     id: 2,
-    title: "Portfolio",
+    title: "Recursos",
     url: "/portfolio",
   },
+  
   {
     id: 3,
-    title: "Blog",
-    url: "/blog",
-  },
-  {
-    id: 4,
-    title: "About",
+    title: "Sobre nós",
     url: "/about",
   },
   {
-    id: 5,
-    title: "Contact",
+    id: 4,
+    title: "Contato",
     url: "/contact",
   },
   {
-    id: 6,
-    title: "Dashboard",
-    url: "/dashboard",
+    id: 5,
+    title: "Abrir Painel",
+    url: "http://localhost:3000/dashboard",
   },
 ];
 
@@ -45,7 +41,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
-        lamamia
+        Convite Digital
       </Link>
       <div className={styles.links}>
         <DarkModeToggle />
@@ -54,7 +50,7 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
-        {session.status === "authenticated" && (
+        {!session.status === "authenticated" && (
           <button className={styles.logout} onClick={signOut}>
             Logout
           </button>

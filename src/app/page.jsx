@@ -8,13 +8,12 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.item}>
         <h1 className={styles.title}>
-          Better design for your digital products.
+        Crie convites digitais para o seu evento!
         </h1>
         <p className={styles.desc}>
-          Turning your Idea into Reality. We bring together the teams from the
-          global tech industry.
+        Nossa plataforma intuitiva oferece uma maneira fácil e conveniente de criar, enviar e gerenciar convites para todos os tipos de eventos. 
         </p>
-        <Button url="/portfolio" text="See Our Works"/>
+        <Button url="/portfolio" text="Saber mais"/>
       </div>
       <div className={styles.item}>
         <Image src={Hero} alt="" className={styles.img} />

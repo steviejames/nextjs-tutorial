@@ -1,1 +1,1 @@
-export const APP_URL = ""
+export const APP_URL = "https://convite-digital-mvp.vercel.app"

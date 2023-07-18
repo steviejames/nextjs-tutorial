@@ -48,7 +48,7 @@ const About = () => {
             o primeiro contato.
             <br />
           </p>
-          <Button url={APP_URL} text="Fale Conosco" />
+          <Button url={APP_URL} text="Fale Conosco" target="_blank" />
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-import { signOut, useSession } from "next-auth/react";
+import { APP_URL } from "@/config/consts";
 
 const links = [
   {
@@ -31,12 +31,12 @@ const links = [
   {
     id: 5,
     title: "Abrir Painel",
-    url: "http://localhost:3000/dashboard",
+    url: APP_URL,
   },
 ];
 
 const Navbar = () => {
-  const session = useSession();
+ 
 
   return (
     <div className={styles.container}>
@@ -50,11 +50,7 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
-        {!session.status === "authenticated" && (
-          <button className={styles.logout} onClick={signOut}>
-            Logout
-          </button>
-        )}
+      
       </div>
     </div>
   );

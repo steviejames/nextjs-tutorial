@@ -4,14 +4,14 @@ import Image from "next/image";
 import Button from "@/components/Button/Button";
 
 export const metadata = {
-  title: "Lama Dev Contact Information",
+  title: "Convite Digital . Contato",
   description: "This is Contact Page",
 };
 
 const Contact = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Let's Keep in Touch</h1>
+      <h1 className={styles.title}>Vamos Manter o Contato</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
@@ -22,15 +22,15 @@ const Contact = () => {
           />
         </div>
         <form className={styles.form}>
-          <input type="text" placeholder="name" className={styles.input} />
-          <input type="text" placeholder="email" className={styles.input} />
+          <input type="text" placeholder="Nome" className={styles.input} />
+          <input type="text" placeholder="Email" className={styles.input} />
           <textarea
             className={styles.textArea}
-            placeholder="message"
+            placeholder="mensagem"
             cols="30"
             rows="10"
           ></textarea>
-          <Button url="#" text="Send"/>
+          <Button url="#" text="Enviar"/>
         </form>
       </div>
     </div>
